@@ -14,7 +14,8 @@ export default function GlobeComponent() {
     const stopSimulation = useMonitorStore(state => state.stopSimulation);
     const [windowDimensions, setWindowDimensions] = useState({ width: 800, height: 600 });
     const [mounted, setMounted] = useState(false);
-    const globeRef = useRef<any>();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const globeRef = useRef<any>(null);
 
     useEffect(() => {
         setMounted(true);
